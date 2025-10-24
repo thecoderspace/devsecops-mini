@@ -1,7 +1,7 @@
-import os
+# insecure version
 def insecure_login():
     password = input("Enter admin password: ")
-    if password == "admin123":  # Hardcoded password (bad practice)
+    if password == "admin123":  # Hardcoded password (BAD PRACTICE)
         print("Access granted!")
     else:
         print("Access denied!")
