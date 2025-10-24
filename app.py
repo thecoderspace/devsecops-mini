@@ -1,10 +1,12 @@
-# insecure version
-def insecure_login():
-    password = input("Enter admin password: ")
-    if password == "admin123":  # Hardcoded password (BAD PRACTICE)
+import getpass
+
+def secure_login():
+    password = getpass.getpass("Enter admin password: ")
+    stored_password = "UseENVorHash123"  # Example: use env variable or hashed password
+    if password == stored_password:
         print("Access granted!")
     else:
         print("Access denied!")
 
 if __name__ == "__main__":
-    insecure_login()
+    secure_login()
